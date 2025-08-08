@@ -1,23 +1,13 @@
-import Introduction from "@/components/introduction";
-import Navbar from "../components/Navbar";
-import AboutMe from "@/components/aboutme";
-import Experience from "@/components/experience";
-import Services from "@/components/services";
-import Portfolio from "@/components/porfolio";
-import Footer from "@/components/footer";
-import Contact from "@/components/contact";
+import FileSystem from "../components/filesystem";
 
 export default function Home() {
   return (
-    <main className="pb-40">
-      <Navbar />
-      <Introduction/>
-      <AboutMe/>
-      <Experience/>
-      <Services/>
-      <Portfolio/>
-      <Contact/>
-      <Footer/>
-    </main>
+    <div className="min-h-screen bg-gradient-to-br from-purple-900 via-pink-900 to-purple-900 p-4">
+      <div className="crt-frame min-h-screen">
+        <main className="pb-40">
+          <FileSystem />
+        </main>
+      </div>
+    </div>
   );
 }

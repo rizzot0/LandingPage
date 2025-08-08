@@ -1,4 +1,17 @@
-import { BellPlus, BookText, Briefcase, Brush, Code2, CodeSquare, Home, Inbox, Mail, PanelsTopLeft, Phone, UserRound, UsersRound, Wrench } from "lucide-react";
+import { 
+    BookText, 
+    Briefcase, 
+    Brush,
+    Code2,
+    CodeSquare, 
+    Github, 
+    Home, 
+    Inbox,
+    LayoutPanelTop,
+    UserRound, 
+    UsersRound, 
+    Wrench 
+} from "lucide-react";
 
 export const dataAboutMe = [
     {
@@ -42,15 +55,16 @@ export const itemsNavbar = [
     },
     {
         id: 4,
-        title: "Target",
+        title: "Portfolio",
         icon: <CodeSquare size={20} />,
         link: "#portfolio",
     },
     {
         id: 5,
-        title: "Home",
-        icon: <Mail size={20} />,
-        link: "#contact",
+        title: "GitHub",
+        icon: <Github size={20} />,
+        link: "https://github.com/rizzot0",
+        external: true
     },
 ];
 
@@ -76,31 +90,43 @@ export const dataSlider = [
 export const dataPortfolio = [
     {
         id: 1,
-        title: "Web Pro",
-        image: "/image-1.jpg",
-        urlGithub: "#!",
-        urlDemo: "#!",
+        title: "RIZZOFLIX - Netflix Clone",
+        image: "/rizzoflix.png",
+        urlGithub: "https://github.com/rizzot0/NetflixClone",
+        urlDemo: "https://netflix-clone-kappa-bice-81.vercel.app/",
+        description: "Clon completo de Netflix con sistema de autenticación, selección de perfiles, y catálogo de películas. Tecnologías: Next.js, TypeScript, Tailwind CSS.",
+        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Firebase"],
+        features: ["Autenticación", "Perfiles múltiples", "Catálogo de películas", "Responsive design"]
     },
     {
         id: 2,
-        title: "Desarrollo Web Ágil",
-        image: "/image-2.jpg",
-        urlGithub: "#!",
-        urlDemo: "#!",
+        title: "English Learning App",
+        image: "/englishapp.png",
+        urlGithub: "https://github.com/rizzot0/englishapp-web-template",
+        urlDemo: "https://englishappca.netlify.app/",
+        description: "Aplicación educativa de inglés con 6 minijuegos para niños de primer ciclo básico. Temáticas: frutas, animales, colores y más.",
+        technologies: ["React", "JavaScript", "CSS3", "HTML5"],
+        features: ["6 minijuegos", "Educativo", "Orientado a niños", "Múltiples temáticas"]
     },
     {
         id: 3,
-        title: "Estrategias Web",
+        title: "Web Pro",
         image: "/image-3.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
+        description: "Proyecto web profesional con enfoque en UX/UI moderno.",
+        technologies: ["React", "Node.js", "MongoDB"],
+        features: ["Diseño moderno", "Responsive", "Optimizado"]
     },
     {
         id: 4,
-        title: "Navegando Ideas Creativas",
+        title: "Estrategias Web",
         image: "/image-4.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
+        description: "Desarrollo de estrategias web innovadoras.",
+        technologies: ["Next.js", "TypeScript", "Tailwind"],
+        features: ["Estrategia", "Innovación", "Performance"]
     },
     {
         id: 5,
@@ -108,6 +134,9 @@ export const dataPortfolio = [
         image: "/image-5.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
+        description: "Creación de sitios web con alto impacto visual.",
+        technologies: ["React", "Three.js", "GSAP"],
+        features: ["Animaciones", "3D", "Interactivo"]
     },
     {
         id: 6,
@@ -115,6 +144,9 @@ export const dataPortfolio = [
         image: "/image-6.jpg",
         urlGithub: "#!",
         urlDemo: "#!",
+        description: "Desarrollo de aplicaciones web dinámicas y escalables.",
+        technologies: ["Vue.js", "Node.js", "PostgreSQL"],
+        features: ["Escalabilidad", "Performance", "Mantenible"]
     },
 ];
 
@@ -199,7 +231,7 @@ export const dataServices = [
     {
         id: 1,
         title: "Desarrollo Web",
-        icon: <PanelsTopLeft />,
+        icon: <LayoutPanelTop />,
         features: [
             {
                 name: "Desarrollo de sitios web personalizados",
@@ -227,7 +259,7 @@ export const dataServices = [
     {
         id: 2,
         title: "Creación de contenido",
-        icon: <BellPlus />,
+        icon: <Brush />,
         features: [
             {
                 name: "Redacción de contenido original y de calidad",
