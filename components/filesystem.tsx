@@ -1,12 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Introduction from "./introduction";
 import AboutMe from "./aboutme";
 import Portfolio from "./porfolio";
 import Games from "./games";
 import Music from "./music";
-import { Ghost, Music as MusicIcon, Gamepad2, FolderOpen, User } from "lucide-react";
+import Contact from "./contact";
+import { Ghost, Music as MusicIcon, Gamepad2, FolderOpen, User, Mail } from "lucide-react";
 
 const FileSystem = () => {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -42,6 +43,12 @@ const FileSystem = () => {
       title: "Música",
       icon: <MusicIcon size={20} />,
       component: <Music />
+    },
+    {
+      id: "contact",
+      title: "Contacto",
+      icon: <Mail size={20} />,
+      component: <Contact />
     }
   ];
 
@@ -56,6 +63,19 @@ const FileSystem = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  // Permite abrir secciones desde otros componentes mediante eventos personalizados
+  useEffect(() => {
+    const handler = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail;
+      if (typeof detail === "string") {
+        setActiveSection(detail);
+      }
+    };
+
+    window.addEventListener("openSection", handler as EventListener);
+    return () => window.removeEventListener("openSection", handler as EventListener);
+  }, []);
 
   return (
     <div className="min-h-screen">
